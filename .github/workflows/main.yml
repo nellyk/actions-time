@@ -1,0 +1,16 @@
+on:
+  pull_request:
+    types: 
+      - opened
+jobs:
+  review-time-comment:
+    runs-on: ubuntu-latest
+    name: A job to mention time for review
+    steps:
+    - name: Hello world action step
+      id: hello
+      uses: nellyk/actions-time@v1
+      with:
+        who-to-greet: 'Mona the Octocat'
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
