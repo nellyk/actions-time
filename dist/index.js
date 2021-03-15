@@ -2977,14 +2977,15 @@ module.exports = safer
 /***/ 2430:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-const { context, GitHub } = __webpack_require__(8941);
+const  github = __webpack_require__(8941);
 const core = __webpack_require__(4909);
 
 
 
 try {
+  const context = github.context;
 const githubToken = core.getInput('GITHUB_TOKEN');
-const octokit = new GitHub(githubToken);
+const octokit = github.getOctokit(githubToken);
 if (context.eventName === 'pull_request') {
     if (context.payload.pull_request === null) {
         core.setFailed('No pull request found.');
