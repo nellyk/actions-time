@@ -1,10 +1,12 @@
 const core = require('@actions/core');
-const { context, GitHub } = require('@actions/github');
+const github= require('@actions/github');
 
 
 try {
+   
+
 const githubToken = core.getInput('GITHUB_TOKEN');
-const octokit = new GitHub(githubToken);
+const octokit = new github.GitHub(githubToken);
 if (context.eventName === 'pull_request') {
     if (context.payload.pull_request === null) {
         core.setFailed('No pull request found.');
