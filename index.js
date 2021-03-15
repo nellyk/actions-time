@@ -21,11 +21,12 @@ if (context.eventName === 'pull_request') {
   }
   const time =  (addDays(new Date(),3)).toDateString();
   const body = `Hello ${nameToGreet}! thank you for your Pull request. We aim to review this pull request before ${time} `
-  const checkStatus = octokit.issues.createComment({
-    ...context.repo,
-    issue_number: context.payload.issue.number,
-    body,
-  });
+  console.log(context)
+  // const checkStatus = octokit.issues.createComment({
+  //   ...context.repo,
+  //   issue_number: context.payload.issue.number,
+  //   body,
+  // });
   core.setOutput("time",time);
 
 }
