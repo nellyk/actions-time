@@ -1,0 +1,24 @@
+{
+  "name": "actions-time",
+  "version": "1.0.0",
+  "description": "provide information for when a pull request will be reviewed by",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nellyk/actions-time.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/nellyk/actions-time/issues"
+  },
+  "homepage": "https://github.com/nellyk/actions-time#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  }
+}
