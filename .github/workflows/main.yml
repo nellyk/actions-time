@@ -12,5 +12,4 @@ jobs:
       uses: nellyk/actions-time@v1
       with:
         who-to-greet: 'Mona the Octocat'
-      with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
